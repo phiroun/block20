@@ -10,22 +10,26 @@ const users = [
 ];
 
 function main() {
-  const rootElement = document.querySelector("#root");
+    const rootElement = document.querySelector("#root");
 
-  const h1 = document.createElement("h1")
-  
-  h1.innerText = "FREELANCERS"
+    const h1 = document.createElement("h1")
+    
+    h1.innerText = "FREELANCERS"
 
-  rootElement.appendChild(h1)
-  
-  const p = document.createElement("p");
-  p.innerText = "Here is the list of users:";
-  root.appendChild(p);
+    rootElement.appendChild(h1)
+    
+    const p = document.createElement("p");
+    p.innerText = "Here is the list of users:";
+    root.appendChild(p);
 
-  const li = document.createElement("li");
-  
-
-
+    const ul = document.createElement("ul");
+    root.appendChild(ul);
+    let li = "";
+  for (user of users){
+    li = document.createElement("li");
+    li.innerText = '${users.name}, ${users.age}, ${users.occupation}';
+    ul.appendChild(li);
+  }
 }
 
 //call the main function
